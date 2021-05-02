@@ -24,6 +24,7 @@ body{
   0 1.7px 5.3px rgba(0, 0, 0, 0.024),
   0 5.8px 17.9px rgba(0, 0, 0, 0.036),
   0 26px 80px rgba(0, 0, 0, 0.06);
+  position: relative;
 }
 
 .container img{
@@ -59,7 +60,7 @@ body{
     width: 70%;
     margin: auto;
 }
-.container .card-footer .btn{
+.btn{
     border: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     outline: none;
@@ -74,7 +75,6 @@ body{
     background: hsl(210, 46%, 95%);
     padding: 10px;
     border-radius: 50%;
-   
 }
 .container .card-footer .author{
     margin: auto;
@@ -90,6 +90,56 @@ body{
     color: hsl(0, 0%, 62%);
     font-size: 13px;
 }
+.card_share{
+    position: absolute;
+    padding: 20px 30px;
+    transform: translateY(-5.1rem);
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "title icons share";
+    background: hsl(217, 19%, 35%);
+    place-items: center;
+}
+.tooltip{
+    display: none;
+}
+.tooltip.active{
+    display: block;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    grid-area: icons;
+    margin-right: -10px;
+}
+.facebook, .twitter, .pinterest{
+    padding: 10px;
+    /* margin-right: -10px; */
+}
+.btn_overlay{
+    background: none;
+    border: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    outline: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background:  hsl(214, 17%, 51%);
+    border-radius: 50%;
+
+}
+.overlay-title{
+    margin-right: -20px;
+    letter-spacing: 10px;
+    font-size: 14px;
+    color: hsl(213, 29%, 70%);
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
